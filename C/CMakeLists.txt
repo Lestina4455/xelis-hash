@@ -5,7 +5,7 @@ set(PROJECT_NAME xelishash_v2)
 project(${PROJECT_NAME} C)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfpu=neon-vfpv4 -mfloat-abi=hard")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} BLAKE3_USE_NEON=1")
 
 add_subdirectory(BLAKE3/c)
 
