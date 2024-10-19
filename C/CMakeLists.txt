@@ -7,7 +7,7 @@ project(${PROJECT_NAME} C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} BLAKE3_USE_NEON=0")
 
-add_subdirectory(BLAKE3/c)
+add_subdirectory(BLAKE3/c/blake3_impl.h)
 
 set_source_files_properties(ChaCha20-SIMD/chacha20_sse2.c PROPERTIES COMPILE_FLAGS "-msse2")
 set_source_files_properties(ChaCha20-SIMD/chacha20_avx2.c PROPERTIES COMPILE_FLAGS "-mavx2")
