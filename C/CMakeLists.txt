@@ -5,7 +5,7 @@ set(PROJECT_NAME xelishash_v2)
 project(${PROJECT_NAME} C)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} BLAKE3_USE_NEON=0")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -maes")
 
 add_subdirectory(BLAKE3/c)
 
@@ -23,6 +23,7 @@ set(SOURCES
     ChaCha20-SIMD/chacha20_dispatch.c
     ChaCha20-SIMD/cpu_features.c
     xelis_hash_v2.c
+    SSE2NEON.h
 )
 
 
