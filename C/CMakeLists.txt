@@ -23,7 +23,7 @@ set(SOURCES
     ChaCha20-SIMD/chacha20_dispatch.c
     ChaCha20-SIMD/cpu_features.c
     xelis_hash_v2.c
-    SSE2NEON.h
+  
 )
 
 
