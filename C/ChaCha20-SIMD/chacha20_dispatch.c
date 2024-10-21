@@ -1,6 +1,7 @@
 #include "cpu_features.h"
 #include "chacha20.h"
 
+#if defined(_M_X64) || defined(__x86_64__)
 static bool initialized = false;
 static cpu_features_t f;
 
