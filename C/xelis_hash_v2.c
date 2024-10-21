@@ -10,6 +10,11 @@
 #include <wmmintrin.h>
 #include "BLAKE3/c/blake3.h"
 #include "ChaCha20-SIMD/chacha20.h"
+#if defined(_M_X64) || defined(__x86_64__)
+#endif
+#if defined(__ARM_NEON)
+  #include <arm_neon.h>
+#endif
 
 #define INPUT_LEN (112)
 #define MEMSIZE (429 * 128)
